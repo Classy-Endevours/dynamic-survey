@@ -1,0 +1,151 @@
+{
+  "title": "Test input survey",
+  "showProgressBar": "top",
+  "pages": [
+    {
+      "elements": [
+        {
+          "type": "ziggeodescribeimage",
+          "name": "ZiggeoQ1",
+          "title": "No First click on Record Video, Autorize access to webcam, and click Record again (change if the steps are different through the SDK). Then to provide you answer: Please describe the picture.",
+          "url": "https://picsum.photos/200/300",
+          "API_KEY": "d9f9efa673e24168234f7e6feb27e8f6",
+          "transcription": true
+        }
+      ]
+    },
+    {
+      "elements": [
+        {
+          "type": "text",
+          "isRequired": true,
+          "name": "PAGE 2",
+          "text": "PAGE 2",
+          "title": "Type the page number"
+        },
+        {
+          "type": "matrix",
+          "name": "PANAS",
+          "isAllRowRequired": true,
+          "title": "Fill in the row values as indicated",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Very slightly or not at all"
+            },
+            {
+              "value": "2",
+              "text": "A little"
+            },
+            {
+              "value": "3",
+              "text": "Moderately"
+            },
+            {
+              "value": "4",
+              "text": "Quite a bit"
+            },
+            {
+              "value": "5",
+              "text": "Extremely"
+            }
+          ],
+          "rows": [
+            {
+              "value": "Test1",
+              "text": "Select Very slightly or not at all"
+            },
+            {
+              "value": "Test2",
+              "text": "Select A little"
+            },
+            {
+              "value": "Test3",
+              "text": "Select Moderately"
+            },
+            {
+              "value": "Test4",
+              "text": "Select Quite a bit"
+            },
+            {
+              "value": "Test5",
+              "text": "Select Extrermely"
+            },
+            {
+              "value": "Test6",
+              "text": "Leave empty at first, and complete by the option of your choice if prompted to do so."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elements": [
+        {
+          "type": "text",
+          "isRequired": true,
+          "name": "PAGE 3",
+          "text": "PAGE 3",
+          "title": "Type the page number"
+        }
+      ]
+    },
+    {
+      "elements": [
+        {
+          "type": "text",
+          "isRequired": true,
+          "name": "PAGE 4",
+          "text": "PAGE 4",
+          "title": "Type the page number"
+        }
+      ]
+    },
+    {
+      "elements": [
+        {
+          "type": "text",
+          "isRequired": true,
+          "name": "PAGE 5",
+          "text": "PAGE 5",
+          "title": "Type the page number"
+        }
+      ]
+    },
+    {
+      "elements": [
+        {
+          "type": "text",
+          "name": "email",
+          "title": "PAGE6."
+        },
+        {
+          "type": "server-random-id",
+          "name": "code",
+          "title": "Here is your validation code"
+        }
+      ]
+    }
+  ],
+  "random": [
+    {
+      "for": []
+    },
+    {
+      "for": []
+    },
+    {
+      "for": []
+    },
+    {
+      "for": []
+    },
+    {
+      "for": []
+    },
+    {
+      "for": []
+    }
+  ],
+  "randomPage": [3, 5]
+}

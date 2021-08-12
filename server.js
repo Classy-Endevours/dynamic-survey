@@ -33,6 +33,7 @@ app.use(express.static(path.join(__dirname, "build")));
 
 app.post("/upload", Survey.uploadSurvey);
 app.get("/response", Survey.getSurvey);
+app.get("/input", Survey.getInput);
 app.get("/ipvalidate", Survey.getIpVaildation);
 app.get("/unique-id", Survey.getRandomUniqueId);
 

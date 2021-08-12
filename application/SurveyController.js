@@ -1,5 +1,7 @@
-const Survey = require("./Survey");
 const RequestIp = require("@supercharge/request-ip");
+const Survey = require("./Survey");
+const Input = require("./Input");
+const data = require("./../data/input.json");
 require("dotenv").config();
 const uploadSurvey = async (req, res) => {
   try {
@@ -62,7 +64,7 @@ const getIpVaildation = async (req, res) => {
 const getNumber = (callback) => {
   var n = Math.floor(Math.random() * 1000000);
   return new Promise(function (resolve, reject) {
-    Survey.findOne({ 'data.code': n }, function (err, result) {
+    Survey.findOne({ "data.code": n }, function (err, result) {
       if (err) {
         reject(err);
       } else if (result) return getNumber(callback);
@@ -71,13 +73,28 @@ const getNumber = (callback) => {
       }
     });
   });
-}
+};
 
 const getRandomUniqueId = async (req, res) => {
-    const uniqueNumber = await getNumber();
-    res.status(200).send({
-        data: uniqueNumber,
-    });
+  const uniqueNumber = await getNumber();
+  res.status(200).send({
+    data: uniqueNumber,
+  });
+};
+
+const getInput = async (req, res) => {
+  try {
+    const result = await Input.findOne({}, {}, { sort: { 'updatedAt' : 1 } });
+    if (!result) {
+      const input = new Input(data);
+      await input.save();
+      res.json(data);
+      return;
+    }
+    res.json(result);
+  } catch (error) {
+    res.json(data);
+  }
 };
 
 module.exports = {
@@ -85,4 +102,5 @@ module.exports = {
   uploadSurvey,
   getIpVaildation,
   getRandomUniqueId,
+  getInput,
 };
