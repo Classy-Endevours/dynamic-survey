@@ -24,9 +24,14 @@ import { combineInput } from "./CustomizedSurvey/Utils/combineInput.js";
 
 window["$"] = window["jQuery"] = $;
 
-export { DescribeImageOnlyAudio } from "./CustomizedSurvey/Components/DescribeImageAudio";
-export { DescribeImage } from "./CustomizedSurvey/Components/DescribeImage";
 export { DescribeByAudio } from "./CustomizedSurvey/Components/DescribeByAudio";
+export { DescribeByToAudio } from "./CustomizedSurvey/Components/DescribeByToAudio";
+export { DescribeImage } from "./CustomizedSurvey/Components/DescribeImage";
+export { DescribeImageOnlyAudio } from "./CustomizedSurvey/Components/DescribeImageAudio";
+export { DescribeText } from "./CustomizedSurvey/Components/DescribeText";
+export { DescribeTextByAudio } from "./CustomizedSurvey/Components/DescribeTextByAudio";
+export { DescribeVideo } from "./CustomizedSurvey/Components/DescribeVideo";
+export { DescribeVideoByAudio } from "./CustomizedSurvey/Components/DescribeVideoByAudio";
 export { RandomId } from "./CustomizedSurvey/Components/RandomId";
 export { ServerRandomId } from "./CustomizedSurvey/Components/ServerRandomId";
 

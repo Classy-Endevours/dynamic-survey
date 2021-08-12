@@ -94,10 +94,10 @@ export class DescribeVideoByAudio extends Survey.SurveyElementBase {
                 <div>
                     <b>{text}</b>
                 </div>
-                <audio controls>
+                <video width={width} height={height} controls>
                     <source src={url} />
-                    Your browser does not support the audio element.
-                </audio>
+                    Your browser does not support HTML video.
+                </video>
                 <ZiggeoRecorder
                     onlyaudio={true}
                     application={API_KEY}

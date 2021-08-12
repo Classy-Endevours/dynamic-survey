@@ -19,6 +19,46 @@
           "url": "http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3",
           "API_KEY": "d9f9efa673e24168234f7e6feb27e8f6",
           "transcription": true
+        },
+        {
+          "type": "ziggeodescribeaudiowithaudio",
+          "name": "ZiggeoQ3",
+          "title": "No First click on Record Video, Autorize access to webcam, and click Record again (change if the steps are different through the SDK). Then to provide you answer: Please describe the picture.",
+          "url": "http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3",
+          "API_KEY": "d9f9efa673e24168234f7e6feb27e8f6",
+          "transcription": true
+        },
+        {
+          "type": "ziggeodescribetext",
+          "name": "ZiggeoQ4",
+          "title": "No First click on Record Video, Autorize access to webcam, and click Record again (change if the steps are different through the SDK). Then to provide you answer: Please describe the picture.",
+          "message": "http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3",
+          "API_KEY": "d9f9efa673e24168234f7e6feb27e8f6",
+          "transcription": true
+        },
+        {
+          "type": "ziggeodescribetextwithaudio",
+          "name": "ZiggeoQ5",
+          "title": "No First click on Record Video, Autorize access to webcam, and click Record again (change if the steps are different through the SDK). Then to provide you answer: Please describe the picture.",
+          "message": "http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3",
+          "API_KEY": "d9f9efa673e24168234f7e6feb27e8f6",
+          "transcription": true
+        },
+        {
+          "type": "ziggeodescribevideo",
+          "name": "ZiggeoQ6",
+          "title": "No First click on Record Video, Autorize access to webcam, and click Record again (change if the steps are different through the SDK). Then to provide you answer: Please describe the picture.",
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+          "API_KEY": "d9f9efa673e24168234f7e6feb27e8f6",
+          "transcription": true
+        },
+        {
+          "type": "ziggeodescribevideowithaudio",
+          "name": "ZiggeoQ7",
+          "title": "No First click on Record Video, Autorize access to webcam, and click Record again (change if the steps are different through the SDK). Then to provide you answer: Please describe the picture.",
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+          "API_KEY": "d9f9efa673e24168234f7e6feb27e8f6",
+          "transcription": true
         }
       ]
     },
