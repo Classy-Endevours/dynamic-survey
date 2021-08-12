@@ -2,9 +2,9 @@ import React from "react";
 import * as Survey from "survey-react";
 import { ZiggeoRecorder } from "react-ziggeo";
 
-const TYPE_NAME = "ziggeodescribebyaudio";
+const TYPE_NAME = "ziggeodescribeaudiowithaudio";
 
-export class DescribeByAudioModel extends Survey.Question {
+export class DescribeByToAudioModel extends Survey.Question {
     getType() {
         return TYPE_NAME;
     }
@@ -46,7 +46,7 @@ export class DescribeByAudioModel extends Survey.Question {
     }
 }
 
-export class DescribeByAudio extends Survey.SurveyElementBase {
+export class DescribeByToAudio extends Survey.SurveyElementBase {
     state = {
         recorder: null,
     };
@@ -99,11 +99,12 @@ export class DescribeByAudio extends Survey.SurveyElementBase {
                     Your browser does not support the audio element.
                 </audio>
                 <ZiggeoRecorder
+                    onlyaudio={true}
                     application={API_KEY}
-                    height={180}
-                    width={320}
                     meta-profile='_RECORD_AUDIO_TRANSCRIPT'
                     ziggeo-meta-profile='_RECORD_AUDIO_TRANSCRIPT'
+                    height={180}
+                    width={320}
                     onRef={(ref) => this.setRecorder(ref)}
                     allowupload={false}
                     onVerified={this.recorderVerified}
@@ -119,11 +120,11 @@ Survey.Serializer.addClass(
     TYPE_NAME,
     [{ name: "text" }, { name: "url" }, { name: "API_KEY" }, { name: "transcription" }, { name: "height" }, { name: "width" }],
     function () {
-        return new DescribeByAudioModel("");
+        return new DescribeByToAudioModel("");
     },
     "question"
 );
 
 Survey.ReactQuestionFactory.Instance.registerQuestion(TYPE_NAME, (props) => {
-    return React.createElement(DescribeByAudio, props);
+    return React.createElement(DescribeByToAudio, props);
 });
