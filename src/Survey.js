@@ -26,6 +26,7 @@ window["$"] = window["jQuery"] = $;
 
 export { DescribeImageOnlyAudio } from "./CustomizedSurvey/Components/DescribeImageAudio";
 export { DescribeImage } from "./CustomizedSurvey/Components/DescribeImage";
+export { DescribeByAudio } from "./CustomizedSurvey/Components/DescribeByAudio";
 export { RandomId } from "./CustomizedSurvey/Components/RandomId";
 export { ServerRandomId } from "./CustomizedSurvey/Components/ServerRandomId";
 

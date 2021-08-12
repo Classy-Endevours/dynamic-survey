@@ -11,6 +11,14 @@
           "url": "https://picsum.photos/200/300",
           "API_KEY": "d9f9efa673e24168234f7e6feb27e8f6",
           "transcription": true
+        },
+        {
+          "type": "ziggeodescribebyaudio",
+          "name": "ZiggeoQ2",
+          "title": "No First click on Record Video, Autorize access to webcam, and click Record again (change if the steps are different through the SDK). Then to provide you answer: Please describe the picture.",
+          "url": "http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3",
+          "API_KEY": "d9f9efa673e24168234f7e6feb27e8f6",
+          "transcription": true
         }
       ]
     },

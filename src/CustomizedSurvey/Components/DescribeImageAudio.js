@@ -32,6 +32,18 @@ export class DescribeImageOnlyAudioModel extends Survey.Question {
     set transcription(newValue) {
         this.setPropertyValue("transcription", newValue);
     }
+    get width() {
+        return this.getPropertyValue("width", "");
+    }
+    set width(newValue) {
+        this.setPropertyValue("width", newValue);
+    }
+    get height() {
+        return this.getPropertyValue("height", "");
+    }
+    set height(newValue) {
+        this.setPropertyValue("height", newValue);
+    }
 }
 
 export class DescribeImageOnlyAudio extends Survey.SurveyElementBase {
@@ -76,13 +88,13 @@ export class DescribeImageOnlyAudio extends Survey.SurveyElementBase {
 
     render() {
         if (!this.question) return null;
-        const { text, url, API_KEY, cssClasses, transcription } = this.question;
+        const { text, url, API_KEY, cssClasses, transcription, height, width } = this.question;
         return (
             <div className={cssClasses.root}>
                 <div>
                     <b>{text}</b>
                 </div>
-                <img src={url} alt={text} />
+                <img src={url} alt={text} height={height} width={width} />
                 <ZiggeoRecorder
                     onlyaudio={true}
                     application={API_KEY}
@@ -103,7 +115,7 @@ export class DescribeImageOnlyAudio extends Survey.SurveyElementBase {
 
 Survey.Serializer.addClass(
     TYPE_NAME,
-    [{ name: "text" }, { name: "url" }, { name: "API_KEY" }, { name: "transcription" }],
+    [{ name: "text" }, { name: "url" }, { name: "API_KEY" }, { name: "transcription" }, { name: "height" }, { name: "width" }],
     function () {
         return new DescribeImageOnlyAudioModel("");
     },

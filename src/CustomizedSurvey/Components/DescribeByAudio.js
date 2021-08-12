@@ -2,9 +2,9 @@ import React from "react";
 import * as Survey from "survey-react";
 import { ZiggeoRecorder } from "react-ziggeo";
 
-const TYPE_NAME = "ziggeodescribeimage";
+const TYPE_NAME = "ziggeodescribebyaudio";
 
-export class DescribeImageModel extends Survey.Question {
+export class DescribeByAudioModel extends Survey.Question {
     getType() {
         return TYPE_NAME;
     }
@@ -46,7 +46,7 @@ export class DescribeImageModel extends Survey.Question {
     }
 }
 
-export class DescribeImage extends Survey.SurveyElementBase {
+export class DescribeByAudio extends Survey.SurveyElementBase {
     state = {
         recorder: null,
     };
@@ -94,6 +94,10 @@ export class DescribeImage extends Survey.SurveyElementBase {
                 <div>
                     <b>{text}</b>
                 </div>
+                <audio controls>
+                    <source src={url} />
+                    Your browser does not support the audio element.
+                </audio>
                 <img src={url} alt={text} height={height} width={width}/>
                 <ZiggeoRecorder
                     application={API_KEY}
@@ -116,11 +120,11 @@ Survey.Serializer.addClass(
     TYPE_NAME,
     [{ name: "text" }, { name: "url" }, { name: "API_KEY" }, { name: "transcription" }, { name: "height" }, { name: "width" }],
     function () {
-        return new DescribeImageModel("");
+        return new DescribeByAudioModel("");
     },
     "question"
 );
 
 Survey.ReactQuestionFactory.Instance.registerQuestion(TYPE_NAME, (props) => {
-    return React.createElement(DescribeImage, props);
+    return React.createElement(DescribeByAudio, props);
 });
