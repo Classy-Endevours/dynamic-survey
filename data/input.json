@@ -5,10 +5,15 @@
     {
       "elements": [
         {
+          "type": "server-random-id",
+          "name": "code",
+          "title": "Here is your validation code"
+        },
+        {
           "type": "ziggeodescribeimage",
           "name": "ZiggeoQ1",
           "title": "No First click on Record Video, Autorize access to webcam, and click Record again (change if the steps are different through the SDK). Then to provide you answer: Please describe the picture.",
-          "url": "https://picsum.photos/200/300",
+          "url": ["https://picsum.photos/200/300", "https://picsum.photos/200/300"],
           "API_KEY": "d9f9efa673e24168234f7e6feb27e8f6",
           "transcription": true
         },

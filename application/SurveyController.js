@@ -7,8 +7,15 @@ const uploadSurvey = async (req, res) => {
   try {
     const ip = RequestIp.getClientIp(req);
     req.body.ip = ip;
-    const survey = new Survey(req.body);
-    await survey.save();
+    if (req.body?.data?.code) {
+      await Survey.findOneAndUpdate({ 'data.code': req.body.data.code }, req.body, {
+        upsert: true,
+      });
+    } else {
+      const survey = new Survey(req.body);
+      await survey.save();
+    }
+
     return res.status(200).send({
       data: req.body,
     });
@@ -76,15 +83,30 @@ const getNumber = (callback) => {
 };
 
 const getRandomUniqueId = async (req, res) => {
-  const uniqueNumber = await getNumber();
-  res.status(200).send({
-    data: uniqueNumber,
-  });
+  try {
+    const uniqueNumber = await getNumber();
+    const ip = RequestIp.getClientIp(req);
+    const survey = new Survey({
+      ip,
+      data: {
+        code: uniqueNumber,
+      },
+    });
+    await survey.save();
+    res.status(200).send({
+      data: uniqueNumber,
+    });
+  } catch (error) {
+    return res.status(500).send({
+      message: "something went wrong",
+      stack: error.message,
+    });
+  }
 };
 
 const getInput = async (req, res) => {
   try {
-    const result = await Input.findOne({}, {}, { sort: { 'updatedAt' : 1 } });
+    const result = await Input.findOne({}, {}, { sort: { updatedAt: 1 } });
     if (!result) {
       const input = new Input(data);
       await input.save();
