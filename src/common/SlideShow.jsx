@@ -1,4 +1,5 @@
 import React from 'react';
+import LoadImage from './LoadingImage';
 
 // const images = ["#0088FE", "#00C49F", "#FFBB28"];
 const delay = 2500;
@@ -35,7 +36,7 @@ function Slideshow({images, alt, width, height}) {
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)`, width: width }}
       >
         {images.map((url, index) => (
-          <img key={index} src={url} alt={alt} width='100%' />
+          <LoadImage key={index} src={url} alt={alt} width='100%' />
         ))}
       </div>
 
